@@ -38,11 +38,12 @@ const ImageGalerry = () => {
     <div>
     {/* // <div className='spinner-border text-primary' role='status'>
     //   <span className='visually-hidden'>Loading...</span> */}
-      <div style={{width: '35%'}}>
-      <Skeleton variant="rectangular" width={150} height={150} />
-      <Skeleton variant="text" sx={{ fontSize: '2rem' }} />
-      
-      </div>
+      {Array.from(new Array(10)).map((_, index) => (
+          <div key={index} style={{ width: '35%'}}>
+            <Skeleton variant="rectangular" width={150} height={150} />
+            <Skeleton variant="text" sx={{ fontSize: '2rem' }} />
+          </div>
+        ))}
     </div>
   ) : (
     <div>
