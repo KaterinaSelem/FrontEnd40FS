@@ -1,30 +1,18 @@
-import { Component } from 'react'
-import { IUserJson } from './UserList';
-// const User = ({ name, username }) => (
-//     <div className="user">
-//       <h4>{name}</h4>
-//       <p>{username}</p>
-//     </div>
-//   );
-  
-//   export default User;
+import { Component } from "react";
+import { IUserJson } from "./UserList";
 
-
-
-
-
-//rce
-export class User extends Component <{person: IUserJson}> {
+// rce
+export class User extends Component<{person: IUserJson}> {
   render() {
-    const { name, username, address: { city }, company: { name: companyName} } = this.props.person; // renamed 'name' key in company object
+    const { name, email, address: { city }, company: { name: companyName } } = this.props.person;
     return (
-      <div className='border my-5'>
-        <h3>{username}</h3>
+      <div className="border my-5">
         <div>{name}</div>
+        <div>{email}</div>
         <div>{city}</div>
         <div>{companyName}</div>
       </div>
-    )
+    );
   }
 }
 
