@@ -1,18 +1,17 @@
-import React from 'react';
-import { friendsImages } from '../utils/constants';
 
-const DreamTeam: React.FC = () => {
+import { friendsImages } from '../utils/constants';
+import Friend from './Friend';
+
+const DreamTeam = () => {
   return (
     <section className='right'>
       <h2>Dream Team</h2>
-      {friendsImages.map((image) => (
-        <img
-          key={image.id}
-          src={image.url}
-          alt={image.alt}
-          className={image.className ? image.className : ''}
-        />
-      ))}
+      {friendsImages.map((e, i) => 
+        <Friend
+          key={e}
+          image={e}
+          num={i+1}/>
+          )}
     </section>
   );
 };

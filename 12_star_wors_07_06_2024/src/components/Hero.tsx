@@ -1,14 +1,14 @@
-import { FC } from 'react';
-import DreamTeam from './DreamTeam';
-import main from '../images/main.jpg';
 
-const Hero: FC = () => {
+
+import hero from '../images/main.jpg';
+
+const Hero  = () => {
   return (
     <div>
            <section className="left">
-        <img src = {main} alt="hero" />
+        <img src = {hero} alt="hero" />
       </section>
-      <DreamTeam/>
+     
     </div>
   )
 }

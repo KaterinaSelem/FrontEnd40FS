@@ -1,11 +1,12 @@
-import React from 'react'
+import { FC } from 'react'
 
-const Friend = () => {
+const Friend: FC<{ image: string, num: number}> = ({image, num }) => {
   return (
-    <div>
+
+      <img className={num == 7 ? 'bottomLeft' : num ==9 ? "bottomRight" : '' } src = {image} alt = {`friend${num}`}/>
       
-    </div>
+
   )
 }
 
-export default Friend
+export default Friend;

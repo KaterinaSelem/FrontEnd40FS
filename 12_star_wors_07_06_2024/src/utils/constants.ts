@@ -12,58 +12,8 @@ export const navItems: string[] = ['Home', 'About me', 'Star Wors', 'Contacts']
 //повторяющиеяся сущности, служебные инструменты
 //массив строк навигационного меню
 
-interface FriendImage {
-    id: number;
-    url: string;
-    alt: string;
-    className?: string; // className необязательное поле
-  }
 
-export const friendsImages: FriendImage[]= [ {
-    id: 1,
-    url: friend1,
-    alt: 'friend1',
-  },
-  {
-    id: 2,
-    url: friend2,
-    alt: 'friend2',
-  },
-  {
-    id: 3,
-    url: friend3,
-    alt: 'friend3',
-  },
-  {
-    id: 4,
-    url: friend4,
-    alt: 'friend4',
-  },
-  {
-    id: 5,
-    url: friend5,
-    alt: 'friend5',
-  },
-  {
-    id: 6,
-    url: friend6,
-    alt: 'friend6',
-  },
-  {
-    id: 7,
-    url: friend7,
-    alt: 'friend7',
-    className: 'bottomLeft',
-  },
-  {
-    id: 8,
-    url: friend8,
-    alt: 'friend8',
-  },
-  {
-    id: 9,
-    url: friend9,
-    alt: 'friend9',
-    className: 'bottomRight',
-  },
+
+export const friendsImages: string[]= [ 
+  friend1, friend2, friend3, friend4, friend5, friend6, friend7, friend8, friend9
 ];

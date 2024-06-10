@@ -1,6 +1,7 @@
+import { FC } from "react"
 
 
-const FarGalaxy = () => {
+const FarGalaxy: FC = () => {
   return (
     <div>
       <p className="farGalaxy">
