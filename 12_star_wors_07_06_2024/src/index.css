@@ -4,7 +4,7 @@
     margin: 0;
 }
 
-.body {
+body {
     font-family: 'Poller One', serif;
     background-image: url('./images/sky.jpg');
     color: #eedb00;

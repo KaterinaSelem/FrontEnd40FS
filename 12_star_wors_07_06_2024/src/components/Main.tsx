@@ -1,9 +1,9 @@
-import React from "react";
+import { FC } from "react";
 import Hero from './Hero'
 import FarGalaxy from './FarGalaxy'
 import DreamTeam from './DreamTeam'
 
-const Main = () => {
+const Main: FC<{page: string}> = () => {
   return (
     <div>
       <Hero/>

@@ -5,8 +5,8 @@ const Footer: FC = () => {
     <footer>
     <div className="commonButton">
       <p>
-        Send me an
-        <span className="email">email</span>
+        Send me an 
+        <span className="email"> e-mail</span>
       </p>
     </div>
   </footer>

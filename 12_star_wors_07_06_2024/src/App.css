@@ -39,7 +39,14 @@ h1 {
 .commonButton {
     display: flex;
     margin: 15px;
+
 }
+
+.commonButton:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
 
 /* @media (max-width: 768px) {
     .commonButton {
