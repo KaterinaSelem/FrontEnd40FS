@@ -1,11 +1,11 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { RootState, AppDispatch } from '../redux/store';
+import { RootState } from '../redux/store';
 import { addIngredient, resetIngredients } from '../redux/actions';
 
 const Sandwich: React.FC = () => {
   const ingredients = useSelector((state: RootState) => state.ingredients);
-  const dispatch: AppDispatch = useDispatch();
+  const dispatch = useDispatch();
 
   return (
     <div>
