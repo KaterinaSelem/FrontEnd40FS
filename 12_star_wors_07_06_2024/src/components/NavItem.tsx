@@ -1,10 +1,11 @@
 import { FC, useContext } from 'react'
-import { PageContext } from '../App';
+import { IPageContext, PageContext } from '../App';
 
-const NavItem: FC< {title: string, setPage: (newValue: string) => void}> = ({title, setPage}) => {
-  const change = useContext(PageContext)
+const NavItem: FC< {title: string}> = ({title}) => {
+  const { setPage } = useContext(PageContext) as IPageContext;
+  // const context = useContext(PageContext);
   return (
-    <li onClick={() => change!(title) } className='commonButton'>{title}</li>
+    <li onClick={() => setPage(title) } className='commonButton'>{title}</li>
     
   )
 }

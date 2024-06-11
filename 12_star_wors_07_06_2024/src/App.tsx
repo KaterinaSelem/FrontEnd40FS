@@ -7,19 +7,23 @@ import Header from "./components/Header";
 import Main from "./components/Main";
 import { navItems } from "./utils/constants";
 
-export const PageContext = createContext<((newValue:string) => void) | null>(null);
+export interface IPageContext {
+  page: string,
+  setPage: (newValue: string) => void
+}
+
+export const PageContext = createContext<IPageContext | null>(null);
 
 function App() { 
   const [page, setPage] = useState( navItems[0] ); // это массив из constants
   console.log( page );
   return (
    <>
-   <PageContext.Provider value={setPage}>
-   <Header setPage = {setPage}/>
-   <Main page = {page}/>
+   <PageContext.Provider value={{page, setPage}}>
+   <Header />
+   <Main/>
    </PageContext.Provider>
    <Footer/>
-   
    </>
   );
 }
