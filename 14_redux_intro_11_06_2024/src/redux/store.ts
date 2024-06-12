@@ -1,25 +1,19 @@
 import { combineReducers, legacy_createStore } from "redux";
 import counterReducer from "./counterReducer";
-
-const store = legacy_createStore(combineReducers({
-    counter: counterReducer 
-})); //make global store
-
-
-
-
-
-//sandwich
+import sandwichReducer from "./sandwichReducer";
 
 const rootReducer = combineReducers({
-    sandwich: sandwichReducer,
-  });
-  
-  const store = createStore(rootReducer);
-  
-  export type AppDispatch = typeof store.dispatch;
+    counter: counterReducer,
+    sandwich: sandwichReducer
+})
 
-  export type RootState = ReturnType <typeof store.getState>; //получили тип данны который хранится в стор
+const store = legacy_createStore(rootReducer); //make global store
 
-  export default store;
+export default store;
+
+export type RootState = ReturnType<typeof store.getState>;
+
+
+
+
   

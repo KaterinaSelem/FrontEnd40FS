@@ -1,24 +1,34 @@
-import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '../redux/store';
-import { addIngredient, resetIngredients } from '../redux/actions';
+import { useDispatch, useSelector } from 'react-redux';
 
-const Sandwich: React.FC = () => {
-  const ingredients = useSelector((state: RootState) => state.ingredients);
-  const dispatch = useDispatch();
+function Sandwich() {
+  const ingredients = useSelector((state: RootState) => state.sandwich.ingredients)
+ const dispatch = useDispatch();
+
+ function handleAddBread() {
+  dispatch({ type: 'sandwich/addIngredient', payload: 'bread'})
+ }
+ function handleAddCheese() {
+  dispatch({ type: 'sandwich/addIngredient', payload: 'cheese'})
+ }
+ function handleAddSalami() {
+  dispatch({ type: 'sandwich/addIngredient', payload: 'salami'})
+ }
+
+ function handleDelete() {
+  dispatch({type: 'sandwich/clear'})
+ }
 
   return (
     <div>
-      <h1>Бутерброд</h1>
-      <div>
-        <button onClick={() => dispatch(addIngredient('хлеб'))}>Добавить хлеб</button>
-        <button onClick={() => dispatch(addIngredient('колбаса'))}>Добавить колбасу</button>
-        <button onClick={() => dispatch(addIngredient('сыр'))}>Добавить сыр</button>
-        <button onClick={() => dispatch(resetIngredients())}>Удалить ингредиенты</button>
-      </div>
-      <p>Бутерброд: {ingredients.join(' ')}</p>
+      <h3>Chose your sandwich: </h3>
+      <p>Sandwich: { ingredients }</p>
+      <button onClick={handleAddBread}>Add Bread</button>
+      <button onClick={handleAddCheese}>Add Cheese</button>
+      <button onClick={handleAddSalami}>Add bolognia</button>
+      <button onClick={handleDelete}>Delete all ingredients</button>
     </div>
-  );
-};
+  )
+}
 
 export default Sandwich;
