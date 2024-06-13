@@ -17,3 +17,5 @@ export default function sandwichReducer(state = initialState, action: Action) {
             return state;
     }
 }
+
+//state можно типизировать по имеющеиуся значению 

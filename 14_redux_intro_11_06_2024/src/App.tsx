@@ -1,7 +1,7 @@
 import './App.css'
 import Counter from './components/Counter'
-import Library from './components/Library'
-import Sandwich from './components/Sandwich'
+// import Library from './components/Library'
+// import Sandwich from './components/Sandwich'
 
 function App() {
  
@@ -9,8 +9,8 @@ function App() {
   return (
     <>
     <Counter/>
-    <Sandwich />
-    <Library />
+    {/* <Sandwich />
+    <Library /> */}
     </>
   )
 }
